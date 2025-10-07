@@ -1,0 +1,26 @@
+spring:
+  application:
+    name: reactivecrud
+
+  # R2DBC configuration for reactive PostgreSQL connection
+  r2dbc:
+    url: r2dbc:postgresql://localhost:5432/reactive_db
+    username: postgres
+    password: Wamiti@55
+    pool:
+      # Connection pool settings for handling concurrent requests
+      initial-size: 10
+      max-size: 20
+      max-idle-time: 30m
+
+  sql:
+    init:
+      mode: always
+
+server:
+  port: 8084
+
+logging:
+  level:
+    org.springframework.r2dbc: DEBUG
+    io.r2dbc.postgresql: DEBUG
