@@ -6,7 +6,7 @@ spring:
   r2dbc:
     url: r2dbc:postgresql://localhost:5432/reactive_db
     username: postgres
-    password: Wamiti@55
+    password: Password
     pool:
       # Connection pool settings for handling concurrent requests
       initial-size: 10
